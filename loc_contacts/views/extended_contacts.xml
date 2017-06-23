@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!-- vista extendida de res.partner para contactos -->
+        <record id="view_partner_form_1" model="ir.ui.view">
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <xpath expr="(//field[@name='website'])" position="after">
+                    <field name="first_name"/>
+                    <field name="first_last_name"/>
+                    <field name="second_name"/>
+                    <field name="second_last_name"/>
+                    <field name="doc_type"/>
+                    <field name="numb_id"/>
+                    <field name="verif_digit"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

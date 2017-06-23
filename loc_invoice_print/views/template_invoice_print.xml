@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+       <template id="loc_invoice_print.softnetco_client" >
+           <xpath expr=".">
+               <t>
+                   .texto
+                   {
+                        color: red;
+                   }
+               </t>
+           </xpath>
+           <t t-call="report.html_container">
+               <t t-foreach="docs" t-as="o">
+                   <t t-call="report.external_layout">
+                       <div class="page">
+                           <h2 t-attf-class="texto">Reporte de Ventas Softnet</h2>
+                           <p>Este es un reporte de pruebas <span t-field="o.name"/></p>
+                           <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Descripcion</th>
+                                        <th>Cantidad</th>
+                                        <th>Precio Unitario</th>
+                                        <th>NIT</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        <th><t t-esc="o.invoice_line_ids.name" /></th>
+                                        <th><t t-esc="o.invoice_line_ids.quantity" /></th>
+                                        <th><t t-esc="o.invoice_line_ids.price_unit" /></th>
+                                        <th><t t-esc="o.nitf" /></th>
+                                </tbody>
+                           </table>
+                       </div>
+                   </t>
+               </t>
+           </t>
+       </template>
+    </data>
+</openerp>

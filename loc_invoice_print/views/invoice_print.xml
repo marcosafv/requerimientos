@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <report id="invoice_print_report"  name="loc_invoice_print.softnetco_client" string="Factura de Venta" model="account.invoice"
+                report_type="qweb-pdf" file="loc_invoice_print.softnetco_client" menu="True"/>
+    </data>
+</openerp>
