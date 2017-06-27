@@ -2,14 +2,12 @@
 <openerp>
     <data>
        <template id="loc_invoice_print.softnetco_client" >
-           <xpath expr=".">
-               <t>
+               <style type="text/css">
                    .texto
                    {
                         color: red;
                    }
-               </t>
-           </xpath>
+               </style>
            <t t-call="report.html_container">
                <t t-foreach="docs" t-as="o">
                    <t t-call="report.external_layout">
@@ -22,13 +20,26 @@
                                         <th>Descripcion</th>
                                         <th>Cantidad</th>
                                         <th>Precio Unitario</th>
-                                        <th>NIT</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                         <th><t t-esc="o.invoice_line_ids.name" /></th>
                                         <th><t t-esc="o.invoice_line_ids.quantity" /></th>
                                         <th><t t-esc="o.invoice_line_ids.price_unit" /></th>
+                                </tbody>
+                           </table>
+                           <table class="table table-striped">
+                           	<h2 align="center">Datos Cliente</h2>
+                          		<thead>
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>NIT</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        <th><t t-esc="o.first_name" /></th>
+                                        <th><t t-esc="o.first_last_name" /></th>
                                         <th><t t-esc="o.nitf" /></th>
                                 </tbody>
                            </table>

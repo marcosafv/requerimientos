@@ -25,6 +25,6 @@ class extended_contacts(models.Model):
         ], "Tipo de Identificacion"
     )
     numb_id = fields.Integer('Nro de identificacion')
-    verif_digit = fields.Integer('VD', size=2)
+    verif_digit = fields.Integer('DV', size=2)
 
 extended_contacts()
