@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+    		<record model="ir.actions.act_window" id="with_holding_list_action">
+                    <field name="name">retenciones</field>
+                    <field name="res_model">with.holding</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field> 
+                    <field name="help" type="html">
+                        <p class="oe_view_nocontent_create">Retenciones</p>
+                    </field>
+            </record>
+        
+    
+    	<menuitem name="Retenciones" id="menu_with_holding" parent="base.menu_purchase_root"/>
+    	
+    	<menuitem action="with_holding_list_action" name="Agregar Retencion" id="menu_add_with_holding"
+    	parent="menu_with_holding"/>
+    
+    </data>
+</openerp>
