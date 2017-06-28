@@ -2,6 +2,8 @@
 <openerp>
     <data>
     
+    <!-- vista inicial -->
+    
     		<record model="ir.actions.act_window" id="with_holding_list_action">
                     <field name="name">retenciones</field>
                     <field name="res_model">with.holding</field>
@@ -11,6 +13,44 @@
                         <p class="oe_view_nocontent_create">Retenciones</p>
                     </field>
             </record>
+            
+     <!-- vista arbol -->
+            
+            <record model="ir.ui.view" id="with_holding_tree_view">
+                    <field name="name">with_holding.tree</field>
+                    <field name="model">with.holding</field>
+                    <field name="type">tree</field>
+                    <field name="arch" type="xml">
+                        <tree string="with_holding vista">
+                           	<field name="concept"/>
+                            <field name="base_uvt"/>
+                            <field name="base_pesos"/>
+                            <field name="rates"/>
+                            <field name="type_rates"/>
+                        </tree>
+                    </field>
+                </record>
+                
+              <!-- vista formulario -->
+                
+                <record model="ir.ui.view" id="with_holding_form_view">
+                    <field name="name">with_holding.form</field>
+                    <field name="model">with.holding</field>
+                    <field name="type">form</field>
+                    <field name="arch" type="xml">
+                     <form string="with_holding formulario">
+                        <sheet>
+                            <group>
+                                <field name="concept"/>
+                                <field name="base_uvt"/>
+                                <field name="base_pesos"/>
+                                <field name="rates"/>
+                                <field name="type_rates"/>
+                            </group>
+                        </sheet>
+                      </form>
+                    </field>
+                </record>
         
     
     	<menuitem name="Retenciones" id="menu_with_holding" parent="base.menu_purchase_root"/>

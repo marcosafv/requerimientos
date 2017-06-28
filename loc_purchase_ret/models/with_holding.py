@@ -5,4 +5,8 @@ from openerp import models, fields, api
 class with_holding(models.Model):
     _name = 'with.holding'
     
-    name = fields.Char('Nombre', size=3, required=4, readonly=5),  
+    concept = fields.Char('Concepto', required=True)
+    base_uvt = fields.Char('A partir de UVT', required=True)
+    base_pesos = fields.Char('Base en Pesos', required=True)
+    rates = fields.Char('Tarifas', required=True)
+    type_rates = fields.Char('Tipo', required=True)
