@@ -10,6 +10,8 @@
                     <field name="first_name"/>
                     <field name="first_last_name"/>
                     <field name="nitf"/>
+                    <field name="with_holding_selec" string="Retencion"/>
+                    <field name="with_holding" attrs="{'invisible':[('with_holding_selec', '!=', True)]}"/>
                 </xpath>
                 <xpath expr="(//field[@name='partner_id'])" position="replace"> 
                     <field name="partner_id" string="Cliente" on_change="on_change_partner_id(partner_id)" />

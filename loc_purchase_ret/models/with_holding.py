@@ -10,3 +10,8 @@ class with_holding(models.Model):
     base_pesos = fields.Char('Base en Pesos', required=True)
     rates = fields.Char('Tarifas', required=True)
     type_rates = fields.Char('Tipo', required=True)
+    
+    """@api.depends('base_pesos')
+        def _concatenate_fields(self):
+        concat = '$ '+ str(self.base_pesos)
+        self.base_pesos = concat"""
