@@ -11,7 +11,11 @@ class extended_account_invoice(models.Model):
     first_name = fields.Char('Nombre')
     first_last_name = fields.Char('Apellido')
     with_holding_selec = fields.Boolean(string=None)
-    with_holding = fields.Many2one('with.holding','Concepto')
+    concept = fields.Many2one('with.holding','Concepto')
+    base_uvt = fields.Char('A partir de UVT')
+    base_pesos = fields.Char('Base en Pesos')
+    rates = fields.Char('Tarifas')
+    type_rates = fields.Char('Tipo')
 
     # Metodo on_change para extraer valor del nit de cada contacto
 
@@ -26,6 +30,18 @@ class extended_account_invoice(models.Model):
             }
         return {'value': values}
     
+    def on_change_with_holding(self, cr, uid, ids, concept, context=None):
+        values = {}
+        if concept:
+            concepto = self.pool.get('with.holding').browse(cr, uid, concept, context=context)
+            values = {
+                'base_uvt': concepto.base_uvt,
+                'base_pesos': concepto.base_pesos,
+                'rates': concepto.rates,
+                'type_rates': concepto.type_rates,
+            }
+        return {'value': values}
+        
     """@api.onchange('with_holding_selec')
     def onChangeWith_holding_selec(self):
     

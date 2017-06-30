@@ -6,17 +6,23 @@
             <field name="inherit_id" ref="base.view_partner_form" />
             <field name="model">res.partner</field>
             <field name="arch" type="xml">
-                <xpath expr="(//field[@name='street'])" position="replace">
-                    <field name="first_name"/>
-                    <field name="first_last_name"/>
-                    <field name="second_name"/>
-                    <field name="second_last_name"/>
-                    <field name="doc_type"/>
-                    <field name="numb_id"/>
-                    <field name="verif_digit"/>
-                </xpath>
+            	<notebook>
+            		<page string="Retenciones" name="with_holding">
+            		<separator string="Retenciones"/>
+            			<group name="group_top">
+            				<group name="group_left">
+            					<field name="concept" on_change="on_change_with_holding(concept)"/>
+       							<field name="base_uvt"/>
+       							<field name="base_pesos"/>
+    						</group>
+    						<group name="group_right">
+        						<field name="rates"/>
+       							<field name="type_rates"/>
+    						</group>
+						</group>
+    				</page>
+    			</notebook>
             </field>
         </record>
-
     </data>
 </openerp>
