@@ -11,7 +11,7 @@ class extended_account_invoice(models.Model):
     first_name = fields.Char('Nombre')
     first_last_name = fields.Char('Apellido')
     with_holding_selec = fields.Boolean(string=None)
-    concept = fields.Many2one('with.holding','Concepto')
+    concept = fields.Char('Concepto')
     base_uvt = fields.Char('A partir de UVT')
     base_pesos = fields.Char('Base en Pesos')
     rates = fields.Char('Tarifas')
@@ -27,21 +27,30 @@ class extended_account_invoice(models.Model):
                 'first_name': partner.x_name1,
                 'first_last_name': partner.x_lastname1,
                 'nitf': partner.formatedNit,
+                'concept': partner.concept,
+                'base_uvt': partner.base_uvt,
+                'base_pesos': partner.base_pesos,
+                'rates': partner.rates,
+                'type_rates': partner.type_rates,
             }
         return {'value': values}
     
-    def on_change_with_holding(self, cr, uid, ids, concept, context=None):
-        values = {}
-        if concept:
-            concepto = self.pool.get('with.holding').browse(cr, uid, concept, context=context)
-            values = {
-                'base_uvt': concepto.base_uvt,
-                'base_pesos': concepto.base_pesos,
-                'rates': concepto.rates,
-                'type_rates': concepto.type_rates,
-            }
-        return {'value': values}
+    @api.onchange('with_holding_selec')
+    def check_with_holding(self):
+        if self.with_holding_selec is True:
+            self.concept = ''
+            self.base_uvt = ''
+            self.base_pesos = ''
+            self.rates = ''
+            self.type_rates = ''
         
+        else:
+            self.concept = 'N/A'
+            self.base_uvt = 'N/A'
+            self.base_pesos = 'N/A'
+            self.rates = 'N/A'
+            self.type_rates = 'N/A'
+                
     """@api.onchange('with_holding_selec')
     def onChangeWith_holding_selec(self):
     

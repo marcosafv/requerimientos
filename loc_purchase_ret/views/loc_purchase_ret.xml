@@ -40,23 +40,27 @@
                     <field name="arch" type="xml">
                      <form string="with_holding formulario">
                         <sheet>
-                            <group>
-                                <field name="concept"/>
-                                <field name="base_uvt"/>
-                                <field name="base_pesos"/>
-                                <field name="rates"/>
-                                <field name="type_rates"/>
-                            </group>
+                        <separator string="Retenciones"/>
+                        	<group name="group_top">
+            				<group name="group_left">
+            					<field name="concept"/>
+       							<field name="base_uvt"/>
+       							<field name="base_pesos"/>
+    						</group>
+    						<group name="group_right">
+        						<field name="rates"/>
+       							<field name="type_rates"/>
+    						</group>
+						</group>
                         </sheet>
                       </form>
                     </field>
                 </record>
         
     
-    	<menuitem name="Retenciones" id="menu_with_holding" parent="base.menu_purchase_root"/>
+    	<!--<menuitem name="Retenciones" id="menu_with_holding" parent="base.menu_purchase_root"/>-->
     	
-    	<menuitem action="with_holding_list_action" name="Agregar Retencion" id="menu_add_with_holding"
-    	parent="menu_with_holding"/>
+    	<menuitem action="with_holding_list_action" name="Retenciones" id="menu_add_with_holding" parent="account.account_account_menu"/>
     
     </data>
 </openerp>

@@ -7,11 +7,23 @@ class with_holding(models.Model):
     _rec_name = 'concept' #indica el campo que va a apuntar el campo relacional ejemplo many2one
     concept = fields.Char('Concepto', required=True)
     base_uvt = fields.Char('A partir de UVT', required=True)
-    base_pesos = fields.Char('Base en Pesos', required=True)
+    base_pesos = fields.Char(required=True)
     rates = fields.Char('Tarifas', required=True)
-    type_rates = fields.Char('Tipo', required=True)
+    type_rates = fields.Selection(
+        [
+            ("Salariales", "Salariales"),
+            ("Compras", "Compras"),
+            ("Servicios", "Servicios"),
+            ("Honorarios y Consultoria", "Honorarios y Consultoria"),
+            ("Otros", "Otros")
+            ], "Tipo"
+                                  )
     
-    """@api.depends('base_pesos')
-        def _concatenate_fields(self):
-        concat = '$ '+ str(self.base_pesos)
-        self.base_pesos = concat"""
+    @api.onchange('base_pesos')
+    def _concatenate_fields(self):
+        if self.base_pesos is False:
+            self.base_pesos = ''
+        else:
+            string_tranform = str(self.base_pesos)
+            concat = '$ ' + string_tranform
+            self.base_pesos = concat

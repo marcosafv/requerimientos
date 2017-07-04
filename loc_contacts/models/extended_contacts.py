@@ -4,7 +4,7 @@ from openerp import models, fields, api
 
 class extended_contacts(models.Model):
     _inherit = 'res.partner'
-    
+    _rec_name = 'concept' 
     concept = fields.Many2one('with.holding','Concepto')
     base_uvt = fields.Char('A partir de UVT')
     base_pesos = fields.Char('Base en Pesos')
