@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+    <!-- vista inicial -->
+    
+    	<!-- 	<record model="ir.actions.act_window" id="add_banks_list_action">
+                    <field name="name">banks</field>
+                    <field name="res_model">add.banks</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field> 
+                    <field name="help" type="html">
+                        <p class="oe_view_nocontent_create">Bancos</p>
+                    </field>
+            </record>
+            -->
+     <!-- vista arbol -->
+        <!--     
+            <record model="ir.ui.view" id="with_holding_tree_view">
+                    <field name="name">add_banks.tree</field>
+                    <field name="model">add.banks</field>
+                    <field name="type">tree</field>
+                    <field name="arch" type="xml">
+                        <tree string="add_banks vista">
+                           	<field name="concept"/>
+                            <field name="base_uvt"/>
+                            <field name="base_pesos"/>
+                            <field name="rates"/>
+                            <field name="type_rates"/>
+                        </tree>
+                    </field>
+                </record>
+                 -->
+              <!-- vista formulario -->
+                
+              <!--  <record model="ir.ui.view" id="add_banks_form_view">
+                    <field name="name">add_banks.form</field>
+                    <field name="model">add.banks</field>
+                    <field name="type">form</field>
+                    <field name="arch" type="xml">
+                     <form string="add_banks formulario">
+                        <sheet>
+                        <separator string="Bancos"/>
+                        	<group name="group_top">
+            				<group name="group_left">
+            					<field name="concept"/>
+       							<field name="base_uvt"/>
+       							<field name="base_pesos"/>
+    						</group>
+    						<group name="group_right">
+        						<field name="rates"/>
+       							<field name="type_rates"/>
+    						</group>
+						</group>
+                        </sheet>
+                      </form>
+                    </field>
+                </record>
+    	
+    	<menuitem action="add_banks_list_action" name="Bancos" id="menu_add_banks" parent="account.account_account_menu"/>
+     -->
+    </data>
+ </openerp>

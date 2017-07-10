@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <record model="res.bank" id="bank_data_1">
+            <field name="name">Banco de Bogotá</field>
+            <field name="bic">01</field>
+        </record>
+
+        <record model="res.bank" id="bank_data_2">
+            <field name="name">Banco Popular S.A.</field>
+            <field name="bic">02</field>
+        </record>
+
+        <record model="res.bank" id="bank_data_3">
+            <field name="name">ITAÚ CORPBANCA COLOMBIA S.A.</field>
+            <field name="bic">06</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_4">
+            <field name="name">Bancolombia S.A.</field>
+            <field name="bic">07</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_5">
+            <field name="name">Citibank-Colombia</field>
+            <field name="bic">09</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_6">
+            <field name="name">BANCO GNB SUDAMERIS S.A.</field>
+            <field name="bic">12</field>
+        </record>
+
+        <record model="res.bank" id="bank_data_7">
+            <field name="name">Banco Bilbao Vizcaya Argentaria Colombia S.A.</field>
+            <field name="bic">13</field>
+        </record>
+
+        <record model="res.bank" id="bank_data_8">
+            <field name="name">Banco  de  Occidente S.A.</field>
+            <field name="bic">23</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_9">
+            <field name="name">BANCO CAJA SOCIAL S.A.</field>
+            <field name="bic">30</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_10">
+            <field name="name">Banco Davivienda S.A.</field>
+            <field name="bic">39</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_11">
+            <field name="name">Banco Colpatria Multibanca Colpatria S.A.</field>
+            <field name="bic">13</field>
+        </record>
+
+        <record model="res.bank" id="bank_data_12">
+            <field name="name">Banco  de  Occidente S.A.</field>
+            <field name="bic">42</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_13">
+            <field name="name">Banco Agrario de Colombia S.A.</field>
+            <field name="bic">43</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_14">
+            <field name="name">Banco Comercial AV Villas S.A.</field>
+            <field name="bic">49</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_15">
+            <field name="name">Banco ProCredit Colombia S.A.</field>
+            <field name="bic">51</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_16">
+            <field name="name">Banco de las Microfinanzas</field>
+            <field name="bic">52</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_17">
+            <field name="name">Banco W S.A.</field>
+            <field name="bic">53</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_18">
+            <field name="name">Banco Coomeva S.A.</field>
+            <field name="bic">54</field>
+        </record>
+
+        <record model="res.bank" id="bank_data_19">
+            <field name="name">Banco Finandina S.A.</field>
+            <field name="bic">55</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_20">
+            <field name="name">Banco Falabella S.A.</field>
+            <field name="bic">56</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_21">
+            <field name="name">Banco Pichincha S.A.</field>
+            <field name="bic">57</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_22">
+            <field name="name">El Banco Cooperativo Coopcentral</field>
+            <field name="bic">58</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_23">
+            <field name="name">BANCO SANTANDER DE NEGOCIOS COLOMBIA S.A.</field>
+            <field name="bic">59</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_24">
+            <field name="name">BANCO MUNDO MUJER S.A.</field>
+            <field name="bic">60</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_25">
+            <field name="name">BANCO MULTIBANK S.A.</field>
+            <field name="bic">61</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_26">
+            <field name="name">BANCO COMPARTIR S.A.</field>
+            <field name="bic">62</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_27">
+            <field name="name">BANCO DE LA REPÚBLICA</field>
+            <field name="bic">00</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_28">
+            <field name="name">BANCO GNB COLOMBIA S.A.</field>
+            <field name="bic">10</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_29">
+            <field name="name">HELM BANK</field>
+            <field name="bic">14</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_30">
+            <field name="name">RED MULTIBANCA COLPATRIA S.A.</field>
+            <field name="bic">19</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_31">
+            <field name="name">BANCO DE COMERCIO EXTERIOR DE COLOMBIA S.A. (BANCOLDEX)</field>
+            <field name="bic">31</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_32">
+            <field name="name">BANCO CAJA SOCIAL - BCSC S.A.</field>
+            <field name="bic">32</field>
+        </record>
+        
+        <record model="res.bank" id="bank_data_33">
+            <field name="name">BANCO AGRARIO DE COLOMBIA S.A.</field>
+            <field name="bic">40</field>
+        </record>
+
+    </data>
+</openerp>
