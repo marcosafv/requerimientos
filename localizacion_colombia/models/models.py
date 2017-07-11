@@ -2,8 +2,8 @@
 
 from openerp import models, fields, api
 
-# class loc_purchase_ret(models.Model):
-#     _name = 'loc_purchase_ret.loc_purchase_ret'
+# class localizacion_colombia(models.Model):
+#     _name = 'localizacion_colombia.localizacion_colombia'
 
 #     name = fields.Char()
 #     value = fields.Integer()

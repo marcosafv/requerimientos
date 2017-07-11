@@ -10,22 +10,20 @@
     """,
 
     'author': "Marcos Flores",
-    'website': "http://www.yourcompany.com",
+    'website': "https://softnetcorp.net/",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml
     # for the full list
-    'category': 'Uncategorized',
+    'category': 'With_Holding',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','loc_contacts'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
         'views/loc_purchase_ret.xml',
         'data/loc_purchase_data.xml',
     ],

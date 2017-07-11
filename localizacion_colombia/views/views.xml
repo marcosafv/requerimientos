@@ -1,0 +1,59 @@
+<openerp>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="localizacion_colombia.list">
+      <field name="name">localizacion_colombia list</field>
+      <field name="model">localizacion_colombia.localizacion_colombia</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="localizacion_colombia.action_window">
+      <field name="name">localizacion_colombia window</field>
+      <field name="res_model">localizacion_colombia.localizacion_colombia</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="localizacion_colombia.action_server">
+      <field name="name">localizacion_colombia server</field>
+      <field name="model_id" ref="model_localizacion_colombia_localizacion_colombia"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="localizacion_colombia" id="localizacion_colombia.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="localizacion_colombia.menu_1" parent="localizacion_colombia.menu_root"/>
+    <menuitem name="Menu 2" id="localizacion_colombia.menu_2" parent="localizacion_colombia.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="localizacion_colombia.menu_1_list" parent="localizacion_colombia.menu_1"
+              action="localizacion_colombia.action_window"/>
+    <menuitem name="Server to list" id="localizacion_colombia" parent="localizacion_colombia.menu_2"
+              action="localizacion_colombia.action_server"/>
+    -->
+  </data>
+</openerp>

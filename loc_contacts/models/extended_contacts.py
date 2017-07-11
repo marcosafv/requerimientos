@@ -3,8 +3,7 @@
 from openerp import models, fields, api
 
 class extended_contacts(models.Model):
-    _inherit = 'res.partner'
-    _rec_name = 'concept' 
+    _inherit = 'res.partner' 
     concept = fields.Many2one('with.holding','Concepto')
     base_uvt = fields.Char('A partir de UVT')
     base_pesos = fields.Char('Base en Pesos')
@@ -14,7 +13,7 @@ class extended_contacts(models.Model):
     def on_change_with_holding(self, cr, uid, ids, concept, context=None):
         values = {}
         if concept:
-            concepto = self.pool.get('with.holding').browse(cr, uid, concept, context=context)
+            concepto = self.pool.get('concept').browse(cr, uid, concept, context=context)
             values = {
                 'base_uvt': concepto.base_uvt,
                 'base_pesos': concepto.base_pesos,

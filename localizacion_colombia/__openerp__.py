@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "loc_invoice",
+    'name': "localizacion_colombia",
 
     'summary': """
-        extension de campos contactos para la facturacion""",
+        Instala todos los modulos de la localizacion de colombia de manera completa""",
 
     'description': """
-        Facturacion de contactos
+        Localizacion Colombia
     """,
 
     'author': "Marcos Flores",
@@ -15,16 +15,17 @@
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml
     # for the full list
-    'category': 'Invoices',
+    'category': 'loc_co',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','account','loc_contacts'],
+    'depends': ['base','loc_bank','loc_contacts','loc_invoice','loc_invoice_print','loc_purchase_ret'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/extended_contacts_invoice.xml',
+        'views/views.xml',
+        'views/templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

@@ -10,7 +10,7 @@
     """,
 
     'author': "Marcos Flores",
-    'website': "http://www.yourcompany.com",
+    'website': "https://softnetcorp.net/",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml
@@ -19,13 +19,11 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','report'],
+    'depends': ['base','report','loc_invoice'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
         'views/invoice_print.xml',
         'views/template_invoice_print.xml',
     ],
