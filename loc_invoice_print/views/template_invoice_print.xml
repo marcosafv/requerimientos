@@ -29,7 +29,7 @@
                                 </tbody>
                            </table>
                            <table class="table table-striped">
-                           	<h2 align="center">Datos Cliente</h2>
+                           	<h3 align="center">Datos Cliente</h3>
                           		<thead>
                                     <tr>
                                         <th>Nombre</th>
@@ -45,7 +45,7 @@
                            </table>
                            
                             <table class="table table-striped">
-                           	<h2 align="center">Retencion Cliente</h2>
+                           	<h3 align="center">Retencion Cliente</h3>
                           		<thead>
                                     <tr>
                                         <th>Concepto</th>

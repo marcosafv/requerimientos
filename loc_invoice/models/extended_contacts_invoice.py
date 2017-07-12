@@ -35,7 +35,7 @@ class extended_account_invoice(models.Model):
             }
         return {'value': values}
     
-    @api.onchange('with_holding_selec')
+    """@api.onchange('with_holding_selec')
     def check_with_holding(self):
         if self.with_holding_selec is True:
             self.concept = ''
@@ -49,7 +49,7 @@ class extended_account_invoice(models.Model):
             self.base_uvt = 'N/A'
             self.base_pesos = 'N/A'
             self.rates = 'N/A'
-            self.type_rates = 'N/A'
+            self.type_rates = 'N/A'"""
                 
     """@api.onchange('with_holding_selec')
     def onChangeWith_holding_selec(self):
