@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "loc_purchase_ret",
+    'name': "loc_tax",
 
     'summary': """
-        Retenciones en colombia""",
+        Agrega Retenciones, ICA""",
 
     'description': """
-        Long description of module's purpose
+        Impuestos en colombia
     """,
 
     'author': "Marcos Flores",
@@ -15,7 +15,7 @@
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml
     # for the full list
-    'category': 'With_Holding',
+    'category': 'Tax',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
@@ -24,8 +24,10 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/loc_purchase_ret.xml',
-        'data/loc_purchase_data.xml',
+        'views/with_holding.xml',
+        'views/tax_ica.xml',
+        'data/with_holding_data.xml',
+        'data/tax_ica_data.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

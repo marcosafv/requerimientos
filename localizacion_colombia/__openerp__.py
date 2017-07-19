@@ -19,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','loc_bank','loc_contacts','loc_invoice','loc_invoice_print','loc_purchase_ret'],
+    'depends': ['base','loc_bank','loc_contacts','loc_invoice','loc_invoice_print','loc_tax','loc_sale'],
 
     # always loaded
     'data': [

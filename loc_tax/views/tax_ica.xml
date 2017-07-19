@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+    <!-- vista inicial -->
+    
+    		<record model="ir.actions.act_window" id="tax_ica_list_action">
+                    <field name="name">ICA</field>
+                    <field name="res_model">tax.ica</field>
+                    <field name="view_type">form</field>
+                    <field name="view_mode">tree,form</field> 
+                    <field name="help" type="html">
+                        <p class="oe_view_nocontent_create">ICA</p>
+                    </field>
+            </record>
+            
+     <!-- vista arbol -->
+            
+            <record model="ir.ui.view" id="tax_ica_tree_view">
+                    <field name="name">tax_ica.tree</field>
+                    <field name="model">tax.ica</field>
+                    <field name="type">tree</field>
+                    <field name="arch" type="xml">
+                        <tree string="tax_ica vista">
+                           	<field name="type_activity"/>
+                            <field name="list_activities"/>
+                            <field name="current_rates"/>
+                        </tree>
+                    </field>
+                </record>
+                
+              <!-- vista formulario -->
+                
+                <record model="ir.ui.view" id="with_holding_form_view">
+                    <field name="name">tax_ica.form</field>
+                    <field name="model">tax.ica</field>
+                    <field name="type">form</field>
+                    <field name="arch" type="xml">
+                     <form string="tax_ica formulario">
+                        <sheet>
+                        <separator string="ICA"/>
+                        	<group name="group_top">
+            				<group name="group_left">
+            					<field name="type_activity"/>
+       							<field name="current_rates"/>
+       					    </group>
+    						<group name="group_right">
+        						<field name="list_activities"/>
+    						</group>
+						</group>
+                        </sheet>
+                      </form>
+                    </field>
+                </record>
+        
+    
+    	<!--<menuitem name="Retenciones" id="menu_with_holding" parent="base.menu_purchase_root"/>-->
+    	
+    	<menuitem action="tax_ica_list_action" name="ICA" id="menu_add_tax_ica" parent="account.account_account_menu"/>
+    	
+    	</data>
+    </openerp>
+    	

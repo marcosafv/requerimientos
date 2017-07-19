@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "loc_sell",
+    'name': "loc_sale",
 
     'summary': """
         Agregando a modulo de cotizacion informacion del cliente""",

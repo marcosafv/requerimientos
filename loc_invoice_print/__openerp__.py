@@ -27,6 +27,7 @@
         'views/invoice_print.xml',
         'views/template_invoice_print.xml',
     ],
+    'css': ['template_invoice_print/static/src/css/client_invoice.css'],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',

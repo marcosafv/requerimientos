@@ -7,7 +7,7 @@ class extended_account_invoice(models.Model):
 
     # campo nit para colocar valor extraido desde el on_change es readonly para no ser editado
 
-    nitf = fields.Char('NIT')
+    nit = fields.Char('NIT')
     first_name = fields.Char('Nombre')
     first_last_name = fields.Char('Apellido')
     with_holding_selec = fields.Boolean(string=None)
@@ -26,7 +26,7 @@ class extended_account_invoice(models.Model):
             values = {
                 'first_name': partner.x_name1,
                 'first_last_name': partner.x_lastname1,
-                'nitf': partner.formatedNit,
+                'nit': partner.formatedNit,
                 'concept': partner.concept,
                 'base_uvt': partner.base_uvt,
                 'base_pesos': partner.base_pesos,

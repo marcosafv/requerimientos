@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
     <data>
+    
+    	<!-- <template id="assets_backend" name="template_invoice_print_assets" inherit_id="web.assets_backend">
+          <xpath expr="." position="inside">
+               <link rel="stylesheet" href="/loc_invoice_print/views/template_invoice_print/static/src/css/client_invoice.css"/>
+               <script type="text/javascript" src="/tienda_mascota/static/src/js/tienda_mascota.js"/>
+          </xpath>
+       </template> -->
+    
        <template id="loc_invoice_print.softnetco_client" >
-               <style type="text/css">
-                   .texto
-                   {
-                        color: red;
-                   }
-               </style>
            <t t-call="report.html_container">
                <t t-foreach="docs" t-as="o">
                    <t t-call="report.external_layout">
                        <div class="page">
-                           <h2 t-attf-class="texto">Reporte de Ventas Softnet</h2>
+                           <h2 style="color: blue;" align="center">Factura de Venta Softnet</h2>
                            <p>Este es un reporte de pruebas <span t-field="o.name"/></p>
                            <table class="table table-striped">
                                 <thead>
@@ -23,13 +25,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                        <th><t t-esc="o.invoice_line_ids.name" /></th>
-                                        <th><t t-esc="o.invoice_line_ids.quantity" /></th>
-                                        <th><t t-esc="o.invoice_line_ids.price_unit" /></th>
+                                        <td><t t-esc="o.invoice_line_ids.name" /></td>
+                                        <td><t t-esc="o.invoice_line_ids.quantity" /></td>
+                                        <td><t t-esc="o.invoice_line_ids.price_unit" /></td>
                                 </tbody>
                            </table>
                            <table class="table table-striped">
-                           	<h3 align="center">Datos Cliente</h3>
+                           	<h3>Datos Cliente</h3>
                           		<thead>
                                     <tr>
                                         <th>Nombre</th>
@@ -38,14 +40,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                        <th><t t-esc="o.first_name" /></th>
-                                        <th><t t-esc="o.first_last_name" /></th>
-                                        <th><t t-esc="o.nitf" /></th>
+                                        <td><t t-esc="o.first_name" /></td>
+                                        <td><t t-esc="o.first_last_name" /></td>
+                                        <td><t t-esc="o.nit" /></td>
                                 </tbody>
                            </table>
                            
                             <table class="table table-striped">
-                           	<h3 align="center">Retencion Cliente</h3>
+                           	<h3>Retencion Cliente</h3>
                           		<thead>
                                     <tr>
                                         <th>Concepto</th>
@@ -56,14 +58,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                        <th><t t-esc="o.concept" /></th>
-                                        <th><t t-esc="o.base_uvt" /></th>
-                                        <th><t t-esc="o.base_pesos"/></th>
-                                        <th><t t-esc="o.rates"/></th>
-                                        <th><t t-esc="o.type_rates"/></th>
+                                        <td><t t-esc="o.concept" /></td>
+                                        <td><t t-esc="o.base_uvt" /></td>
+                                        <td><t t-esc="o.base_pesos"/></td>
+                                        <td><t t-esc="o.rates"/></td>
+                                        <td><t t-esc="o.type_rates"/></td>
                                 </tbody>
                            </table>
-                           
                        </div>
                    </t>
                </t>

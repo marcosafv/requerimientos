@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+    
+    <!-- Actividades Industriales -->		
+    		
+       <record id="tax_ica_data_1" model="tax.ica">
+    	    <field name="type_activity">Actividades Industriales</field>
+            <field name="list_activities">Producción de alimentos, excepto bebidas; producción de calzado y prendas de vestir.</field>
+            <field name="current_rates">4,14</field>
+       </record>
+        
+        <record id="tax_ica_data_2" model="tax.ica">
+    		<field name="type_activity">Actividades Industriales</field>
+            <field name="list_activities">Fabricación de productos primarios de hierro y acero; fabricación de material de transporte</field>
+            <field name="current_rates">6,9</field>
+        </record>
+        
+        <record id="tax_ica_data_3" model="tax.ica">
+    		<field name="type_activity">Actividades Industriales</field>
+            <field name="list_activities">Edición de libros</field>
+            <field name="current_rates">8</field>
+        </record>
+        
+        <record id="tax_ica_data_4" model="tax.ica">
+    		<field name="type_activity">Actividades Industriales</field>
+            <field name="list_activities">Demás actividades industriales</field>
+            <field name="current_rates">11,4</field>
+         </record>
+
+	 <!-- Actividades Comerciales -->	         
+         
+         <record id="tax_ica_data_5" model="tax.ica">
+    		<field name="type_activity">Actividades Comerciales</field>
+            <field name="list_activities">Venta de alimentos y productos agrícolas en bruto; venta de textos escolares y libros (incluye cuadernos escolares); venta de drogas y medicamentos</field>
+            <field name="current_rates">11,4</field>
+         </record>
+         
+         <record id="tax_ica_data_6" model="tax.ica">
+    		<field name="type_activity">Actividades Comerciales</field>
+            <field name="list_activities">Venta de maderas y materiles para construcción; venta de automotores (incluidas motocicletas)</field>
+            <field name="current_rates">6,9</field>
+         </record>
+         
+         <record id="tax_ica_data_7" model="tax.ica">
+    		<field name="type_activity">Actividades Comerciales</field>
+            <field name="list_activities">Venta de cigarrillos y licores; venta de combustibles derivados del petróleo y venta de joyas</field>
+            <field name="current_rates">13,8</field>
+         </record>
+         
+         <record id="tax_ica_data_8" model="tax.ica">
+    		<field name="type_activity">Actividades Comerciales</field>
+            <field name="list_activities">Demás actividades comerciales</field>
+            <field name="current_rates">11,04</field>
+         </record>
+         
+      <!--  Actividades de servicios -->
+      
+      	<record id="tax_ica_data_9" model="tax.ica">
+    		<field name="type_activity">Actividades de servicios</field>
+            <field name="list_activities">Transporte, publicación de revistas, libros y periódicos, radiodifusión y programación de televisión.</field>
+            <field name="current_rates">4,14</field>
+         </record>
+         
+         <record id="tax_ica_data_10" model="tax.ica">
+    		<field name="type_activity">Actividades de servicios</field>
+            <field name="list_activities">Consultoría profesional; servicios prestados por contratistas de construcción, constructores y urbanizadores, presentación de películas en salas de cine.</field>
+            <field name="current_rates">6,9</field>
+         </record>
+         
+         <record id="tax_ica_data_11" model="tax.ica">
+    		<field name="type_activity">Actividades de servicios</field>
+            <field name="list_activities">Servicio de restaurante, cafetería, grill, discoteca y similares; servicios de hotel, motel, hospedaje, amoblado y similares; servicio de casas de empeño y servicios de vigilancia.</field>
+            <field name="current_rates">13,8</field>
+         </record>
+         
+         <record id="tax_ica_data_12" model="tax.ica">
+    		<field name="type_activity">Actividades de servicios</field>
+            <field name="list_activities">Servicios de educación prestados por establecimientos privados en los niveles de educación inicial, preescolar, básica primaria, básica secundaria y media.</field>
+            <field name="current_rates">7</field>
+         </record>
+         
+         <record id="tax_ica_data_13" model="tax.ica">
+    		<field name="type_activity">Actividades de servicios</field>
+            <field name="list_activities">Demás actividades de servicios</field>
+            <field name="current_rates">9,66</field>
+         </record>
+         
+     <!-- Actividades financieras -->
+     
+     	 <record id="tax_ica_data_14" model="tax.ica">
+    		<field name="type_activity">Actividades financieras</field>
+            <field name="list_activities">Actividades financieras</field>
+            <field name="current_rates">11,04</field>
+         </record>
+         
+         </data>
+      </openerp>
+         
