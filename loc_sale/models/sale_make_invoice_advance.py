@@ -42,9 +42,9 @@ class SaleAdvancePaymentInv(models.TransientModel):
         invoice = inv_obj.create({
             'name': order.client_order_ref or order.name,
             'origin': order.name,
-            'first_name': order.first_name,
-            'first_last_name': order.last_first_name,
-            'nit': order.nit,
+            'first_name_aux': order.first_name,
+            'first_last_name_aux': order.last_first_name,
+            'nit_aux': order.nit,
             'type': 'out_invoice',
             'reference': False,
             'account_id': order.partner_id.property_account_receivable_id.id,
