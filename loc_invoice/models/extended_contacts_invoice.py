@@ -7,9 +7,12 @@ class extended_account_invoice(models.Model):
 
     # campo nit para colocar valor extraido desde el on_change es readonly para no ser editado
 
-    nit = fields.Char('NIT')
-    first_name = fields.Char('Nombre')
-    first_last_name = fields.Char('Apellido')
+    nit = fields.Char(compute="_save", store=True)
+    nit_aux = fields.Char()
+    first_name = fields.Char(compute="_save", store=True)
+    first_name_aux = fields.Char()
+    first_last_name = fields.Char(compute="_save", store=True)
+    first_last_name_aux = fields.Char()
     with_holding_selec = fields.Boolean(string=None)
     concept = fields.Char('Concepto')
     base_uvt = fields.Char('A partir de UVT')
@@ -24,9 +27,9 @@ class extended_account_invoice(models.Model):
         if partner_id:
             partner = self.pool.get('res.partner').browse(cr, uid, partner_id, context=context)
             values = {
-                'first_name': partner.x_name1,
-                'first_last_name': partner.x_lastname1,
-                'nit': partner.formatedNit,
+                'first_name_aux': partner.x_name1,
+                'first_last_name_aux': partner.x_lastname1,
+                'nit_aux': partner.formatedNit,
                 'concept': partner.concept,
                 'base_uvt': partner.base_uvt,
                 'base_pesos': partner.base_pesos,
@@ -35,6 +38,13 @@ class extended_account_invoice(models.Model):
             }
         return {'value': values}
     
+    @api.depends('nit', 'nit_aux')
+    def _save(self):
+        self.nit = self.nit_aux
+        self.first_name = self.first_name_aux
+        self.first_last_name = self.first_last_name_aux
+    
+
     """@api.onchange('with_holding_selec')
     def check_with_holding(self):
         if self.with_holding_selec is True:
