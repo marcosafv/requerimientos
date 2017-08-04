@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+    <!-- vista inicial -->
+    		
+    	 <record model="ir.actions.act_window" id="tax_iva_provider_action">
+                <field name="name">tax_iva_provider</field>
+                <field name="res_model">tax.iva.provider</field>
+		   <!-- <field name="domain">[('field_name','condition',criteria)]</field>-->
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+                <field name="help" type="html">
+                        <p class="oe_view_nocontent_create">Retenciones en la fuente IVA Proveedor</p>
+                </field>
+            </record>
+            
+            <record model="ir.ui.view" id="tax_iva_provider_form_view">
+                <field name="name">tax_iva_provider.form</field>
+                <field name="model">tax.iva.provider</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="tax_iva_provider_form">
+                    </form>
+                </field>
+            </record>
+            
+          
+            <record model="ir.ui.view" id="tax_iva_tree_view">
+                <field name="name">tax_iva_provider.tree</field>
+                <field name="model">tax.iva.provider</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree string="tax_iva_provider_tree">
+                    </tree>
+                </field>
+            </record>
+
+                    
+ 		 <menuitem action="tax_iva_provider_action" name="Retencion IVA del Proveedor" id="menu_action_tax_iva_provider" parent="account.menu_finance_payables"/>
+    	
+    </data>
+    </openerp>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+    <!-- vista inicial -->
+    		
+    	 <record model="ir.actions.act_window" id="tax_iva_client_action">
+                <field name="name">tax_iva_client</field>
+                <field name="res_model">tax.iva.client</field>
+		   <!-- <field name="domain">[('field_name','condition',criteria)]</field>-->
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+                <field name="help" type="html">
+                        <p class="oe_view_nocontent_create">Retenciones en la fuente IVA Cliente</p>
+                </field>
+            </record>
+            
+            <record model="ir.ui.view" id="tax_iva_form_view">
+                <field name="name">tax_iva_client.form</field>
+                <field name="model">tax.iva.client</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="tax_iva_form">
+                    <group name="group_top">
+            				<group name="group_left">
+            					<field name="diary_iva" string="Diario" domain="[('name','=','Banco')]"/>
+       							<field name="client" string="Cliente"/>
+       							<field name="accounting_date" string="Fecha Contable"/>
+       							<field name="force_period" string="Forzar Periodo"/>
+    						</group>
+    						<group name="group_right">
+        						<field name="type" string="Tipo"/>
+       							<field name="third_person" string="Tercero"/>
+       							<field name="accounts_receivable" string="Cuenta Acreedora"/>
+       							<field name="accounts_payable" string="Cuenta Deudora"/>
+    						</group>
+    						<group name="group_right_right">
+        						<field name="internal_code" string="Codigo Interno"/>
+       							<field name="description" string="Descripcion"/>
+       							<field name="voucher_date" string="Fecha de Comprobante"/>
+    						</group>
+						</group>
+						<notebook>
+            				<page string="Retencion" name="with_holding_iva_client">
+            					<separator string="Retenciones"/>
+									<field name="type" string="Tipo"/>
+            				</page>
+    					</notebook>
+                    </form>
+                </field>
+            </record>
+          
+            <record model="ir.ui.view" id="tax_iva_tree_view">
+                <field name="name">tax_iva_client.tree</field>
+                <field name="model">tax.iva.client</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree string="tax_iva_tree">
+                    </tree>
+                </field>
+            </record>
+            
+ 		 <menuitem action="tax_iva_client_action" name="Retencion IVA del Cliente" id="menu_action_tax_iva" parent="account.menu_finance_receivables"/>
+    	
+    </data>
+    </openerp>

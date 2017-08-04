@@ -10,7 +10,7 @@
                     <field name="view_type">form</field>
                     <field name="view_mode">tree,form</field> 
                     <field name="help" type="html">
-                        <p class="oe_view_nocontent_create">Retenciones</p>
+                        <p class="oe_view_nocontent_create">Retenciones en la fuente</p>
                     </field>
             </record>
             
@@ -52,7 +52,19 @@
        							<field name="type_rates"/>
     						</group>
 						</group>
-                        </sheet>
+						<notebook>
+            			  <page string="Retenciones_Cuentas" name="with_holding_accounts">
+            				<separator string="Cuentas"/>
+            					<group name="group_top">
+            						<group name="group_left">
+            							<field name="concept" on_change="on_change_with_holding(concept)"/>
+       									<field name="base_uvt"/>
+       									<field name="base_pesos"/>
+    								</group>
+    						</group>
+    					  </page>
+    					</notebook>
+						</sheet>
                       </form>
                     </field>
                 </record>
@@ -60,7 +72,7 @@
     
     	<!--<menuitem name="Retenciones" id="menu_with_holding" parent="base.menu_purchase_root"/>-->
     	
-    	<menuitem action="with_holding_list_action" name="Retenciones" id="menu_add_with_holding" parent="account.account_account_menu"/>
+    	<menuitem action="with_holding_list_action" name="Retención en la fuente" id="menu_add_with_holding" parent="account.account_account_menu"/>
     
     </data>
 </openerp>

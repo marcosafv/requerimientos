@@ -26,6 +26,8 @@
         # 'security/ir.model.access.csv',
         'views/with_holding.xml',
         'views/tax_ica.xml',
+        'views/tax_iva_client.xml',
+        'views/tax_iva_provider.xml',
         'data/with_holding_data.xml',
         'data/tax_ica_data.xml',
     ],
