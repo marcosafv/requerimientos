@@ -14,7 +14,7 @@ class extended_account_invoice(models.Model):
     first_last_name = fields.Char(compute="_save", store=True)
     first_last_name_aux = fields.Char()
     with_holding_selec = fields.Boolean(string=None)
-    concept = fields.Char('Concepto')
+    concept = fields.Many2one('with.holding','Concepto')
     base_uvt = fields.Char('A partir de UVT')
     base_pesos = fields.Char('Base en Pesos')
     rates = fields.Char('Tarifas')
@@ -30,12 +30,7 @@ class extended_account_invoice(models.Model):
                 'first_name_aux': partner.x_name1,
                 'first_last_name_aux': partner.x_lastname1,
                 'nit_aux': partner.formatedNit,
-                'concept': partner.concept,
-                'base_uvt': partner.base_uvt,
-                'base_pesos': partner.base_pesos,
-                'rates': partner.rates,
-                'type_rates': partner.type_rates,
-            }
+                }
         return {'value': values}
     
     @api.depends('nit', 'nit_aux')
@@ -73,3 +68,8 @@ class extended_account_invoice(models.Model):
             self.with_holding_selec = str(False)"""
     
 extended_account_invoice()
+
+class extended_account_invoice_line(models.Model):
+    _inherit = 'account.invoice.line'
+    
+    concept = fields.Many2one('with.holding','Concepto')

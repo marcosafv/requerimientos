@@ -21,9 +21,13 @@
                 <field name="type">form</field>
                 <field name="arch" type="xml">
                     <form string="tax_iva_form">
+                    <header><!-- Buttons and status widget --> 
+                     	<!-- <button class="oe_inline oe_stat_button" type="object" icon="fa-list" name="pop_up"/>-->
+                    	<field name="calculate_iva" widget="statusbar" statusbar_visible="Borrador,Confirmado,Realizado" />
+                    </header>
                     <group name="group_top">
             				<group name="group_left">
-            					<field name="diary_iva" string="Diario" domain="[('name','=','Banco')]"/>
+            					<field name="diary_iva" string="Diario" domain="[('name','=','Diario IVA Venta')]"/>
        							<field name="client" string="Cliente"/>
        							<field name="accounting_date" string="Fecha Contable"/>
        							<field name="force_period" string="Forzar Periodo"/>
@@ -35,6 +39,7 @@
        							<field name="accounts_payable" string="Cuenta Deudora"/>
     						</group>
     						<group name="group_right_right">
+    							<field name="number_invoice" string="Numero de Factura"/>
         						<field name="internal_code" string="Codigo Interno"/>
        							<field name="description" string="Descripcion"/>
        							<field name="voucher_date" string="Fecha de Comprobante"/>
@@ -43,13 +48,15 @@
 						<notebook>
             				<page string="Retencion" name="with_holding_iva_client">
             					<separator string="Retenciones"/>
-									<field name="type" string="Tipo"/>
+            					<group name="group_right_right">
+									<field name="tax_iva_invoice" string="IVA"/>
+								</group>
             				</page>
     					</notebook>
                     </form>
                 </field>
             </record>
-          
+            
             <record model="ir.ui.view" id="tax_iva_tree_view">
                 <field name="name">tax_iva_client.tree</field>
                 <field name="model">tax.iva.client</field>

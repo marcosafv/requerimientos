@@ -13,18 +13,15 @@
                     <field name="nit_aux" string="NIT_AUX" invisible="True" />
                     <field name="first_name_aux" string="Nombre_Aux" invisible="True" />
                     <field name="first_last_name_aux" string="Apellido_Aux" invisible="True" />
-                    <field name="with_holding_selec" string="Retencion"/>
-            		<field name="concept" attrs="{'invisible':[('with_holding_selec', '!=', True)]}"/>
-       				<field name="base_uvt" attrs="{'invisible':[('with_holding_selec', '!=', True)]}"/>
-	       			<field name="base_pesos" string="Base Pesos" attrs="{'invisible':[('with_holding_selec', '!=', True)]}"/>
-	    			<field name="rates" attrs="{'invisible':[('with_holding_selec', '!=', True)]}"/>
-       				<field name="type_rates" attrs="{'invisible':[('with_holding_selec', '!=', True)]}"/>
                 </xpath>
                 
                 <xpath expr="(//field[@name='partner_id'])" position="attributes"> 
                     <attribute name="on_change">on_change_partner_id(partner_id)</attribute>
                 </xpath>
-                
+               
+                <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='price_unit']" position="after"> 
+						<field name="concept"/>
+                </xpath>
             </field>
         </record>
   
